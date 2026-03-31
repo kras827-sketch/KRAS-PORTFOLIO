@@ -1,0 +1,36 @@
+[
+  {
+    "id": "invoice-pro",
+    "title": "Invoice Pro",
+    "subtitle": null,
+    "category": "BACKEND INFRASTRUCTURE",
+    "category_color": "purple",
+    "description": "Architected a scalable microservice architecture to handle automated PDF generation and distribution. Designed high-concurrency background processing to handle 5,000+ simultaneous requests during peak billing cycles using asynchronous task queues.",
+    "tech_stack": ["Python", "FastAPI", "PostgreSQL", "Redis", "Docker"],
+    "image_url": "/images/invoice-pro-ui.png",
+    "links": [
+      { "type": "github", "url": "https://github.com/kras827-sketch", "label": "Code" },
+      { "type": "live", "url": "#", "label": "Live" }
+    ],
+    "cta_label": "Detailed Case Study",
+    "cta_style": "dark",
+    "featured": true
+  },
+  {
+    "id": "kras-pay",
+    "title": "Kras Pay",
+    "subtitle": "DIGITAL FINANCE ECOSYSTEM",
+    "category": "FINTECH & ML",
+    "category_color": "pink",
+    "description": "Engineered a robust financial gateway for cross-border transactions. Integrated a real-time fraud detection engine using ML classifiers to assess risk scores for every payment. Implemented secure ledger reconciliation systems and multi-currency settlement pipelines.",
+    "tech_stack": ["Node.js", "Scikit-learn", "AWS Lambda", "GraphQL", "PyTorch"],
+    "image_url": "/images/kras-pay-ui.png",
+    "links": [
+      { "type": "github", "url": "https://github.com/kras827-sketch", "label": "Code" },
+      { "type": "live", "url": "#", "label": "Live" }
+    ],
+    "cta_label": "View Finance Implementation",
+    "cta_style": "gradient",
+    "featured": true
+  }
+]

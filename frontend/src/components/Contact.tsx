@@ -100,7 +100,7 @@ export default function Contact() {
   };
 
   const inputClasses =
-    "w-full px-4 py-3 text-sm bg-[var(--navy-50)] border border-[var(--navy-200)] rounded-xl text-[var(--text-primary)] placeholder:text-[var(--navy-400)] transition-all duration-200 dark:bg-black dark:border-[#333] dark:text-zinc-100 dark:placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-[var(--blue-500)]";
+    "w-full px-4 py-3 text-sm bg-white border border-[var(--navy-200)] rounded-xl text-[var(--text-primary)] placeholder:text-[var(--navy-400)] transition-all duration-200 dark:bg-black dark:border-[#333] dark:text-zinc-100 dark:placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-[var(--blue-500)]";
 
   return (
     <section id="contact" className="relative">

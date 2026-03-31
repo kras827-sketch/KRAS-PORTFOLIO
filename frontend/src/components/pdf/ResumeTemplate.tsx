@@ -16,10 +16,10 @@ import type { CVData } from "@/data/cv-data";
 // ─────────────────────────────────────────────────────
 // STYLES - Modern 2026 professional resume
 // ─────────────────────────────────────────────────────
-const PRIMARY_COLOR = "#0055CC";
-const DARK_TEXT = "#1a1a1a";
-const LIGHT_TEXT = "#4a5568";
-const BORDER_COLOR = "#e0e7ff";
+const PRIMARY_COLOR = "#0f172a"; // Slate 900
+const DARK_TEXT = "#1e293b"; // Slate 800
+const LIGHT_TEXT = "#475569"; // Slate 600
+const BORDER_COLOR = "#e2e8f0"; // Slate 200
 
 const styles = StyleSheet.create({
   page: {
@@ -269,6 +269,18 @@ export function ResumeTemplate({ data }: ResumeTemplateProps) {
             <Text>{data.phone}</Text>
             <Text>•</Text>
             <Text>{data.location}</Text>
+            {data.github && (
+              <>
+                <Text>•</Text>
+                <Text>{data.github}</Text>
+              </>
+            )}
+            {data.linkedin && (
+              <>
+                <Text>•</Text>
+                <Text>{data.linkedin}</Text>
+              </>
+            )}
           </View>
         </View>
 

@@ -57,14 +57,14 @@ export const cvData: CVData = {
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // PERSONAL INFO - Edit these
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  name: "Backend & ML Engineer",
-  role: "Senior Backend Engineer | ML Specialist",
-  email: "contact@example.com",
-  phone: "+1 (555) 123-4567",
+  name: "Kras",
+  role: "Senior Full-Stack & ML Engineer",
+  email: "hello@kras.io",
+  phone: "+1 (555) 019-2834",
   location: "San Francisco, CA",
-  website: "yourportfolio.com",
-  github: "github.com/yourname",
-  linkedin: "linkedin.com/in/yourname",
+  website: "kras-portfolio.vercel.app",
+  github: "github.com/kras827-sketch",
+  linkedin: "linkedin.com/in/kras",
 
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // PROFESSIONAL SUMMARY

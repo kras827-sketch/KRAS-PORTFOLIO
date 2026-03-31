@@ -55,22 +55,22 @@ export interface CVData {
 
 export const cvData: CVData = {
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  // PERSONAL INFO - Edit these
+  // PERSONAL INFO
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  name: "Kras",
-  role: "Senior Full-Stack & ML Engineer",
-  email: "hello@kras.io",
-  phone: "+1 (555) 019-2834",
-  location: "San Francisco, CA",
+  name: "Oyedeji Olawale",
+  role: "Backend & Machine Learning Engineer",
+  email: "oyedeji827@gmail.com",
+  phone: "+234 816 000 0000",
+  location: "Lagos, Nigeria (Remote)",
   website: "kras-portfolio.vercel.app",
   github: "github.com/kras827-sketch",
-  linkedin: "linkedin.com/in/kras",
+  linkedin: "linkedin.com/in/oyedeji",
 
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // PROFESSIONAL SUMMARY
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   summary:
-    "Senior Backend Engineer with expertise in designing scalable microservices and implementing machine learning solutions. Specialized in high-performance systems, secure transaction processing, and real-time data pipelines. Proven track record of architecting systems handling millions of transactions and deploying ML models in production.",
+    "Backend & Machine Learning Engineer with deep expertise in designing scalable microservices, building high-performance data pipelines, and deploying production ML models. Specialized in distributed systems, real-time analytics, secure transaction processing, and AI-driven infrastructure. Proven track record of architecting systems handling millions of requests and shipping ML solutions from prototype to production.",
 
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // CORE SKILLS
@@ -80,51 +80,50 @@ export const cvData: CVData = {
       category: "Backend & APIs",
       items: [
         "Python (FastAPI, Django, Flask)",
+        "Go (Gin, Fiber)",
         "Node.js (Express, NestJS)",
-        "RESTful APIs",
-        "GraphQL",
+        "RESTful APIs & GraphQL",
         "Microservices Architecture",
       ],
     },
     {
-      category: "Machine Learning",
+      category: "Machine Learning & AI",
       items: [
-        "PyTorch",
-        "Scikit-learn",
-        "TensorFlow",
-        "Real-time Classification",
-        "Fraud Detection Systems",
-        "ML Deployment & Inference",
+        "PyTorch & TensorFlow",
+        "Scikit-learn & XGBoost",
+        "Computer Vision (OpenCV)",
+        "NLP & Transformer Models",
+        "ML Pipeline Deployment",
       ],
     },
     {
-      category: "Databases & Cache",
+      category: "Databases & Caching",
       items: [
-        "PostgreSQL",
-        "MongoDB",
-        "Redis",
+        "PostgreSQL & MySQL",
+        "MongoDB & DynamoDB",
+        "Redis & Memcached",
         "Database Optimization",
         "Query Performance Tuning",
       ],
     },
     {
-      category: "DevOps & Cloud",
+      category: "Cloud & DevOps",
       items: [
-        "Docker",
-        "Kubernetes",
-        "AWS (Lambda, EC2, RDS, S3)",
-        "CI/CD Pipelines",
-        "Infrastructure as Code",
+        "AWS (Lambda, EC2, S3, SageMaker)",
+        "Docker & Kubernetes",
+        "CI/CD (GitHub Actions, Jenkins)",
+        "Infrastructure as Code (Terraform)",
+        "Monitoring (Grafana, Prometheus)",
       ],
     },
     {
-      category: "Frontend",
+      category: "Frontend & Tools",
       items: [
-        "TypeScript",
-        "React",
-        "Next.js",
+        "TypeScript & React",
+        "Next.js & Vite",
         "Tailwind CSS",
-        "Responsive Design",
+        "Git & GitHub",
+        "Agile / Scrum Methodologies",
       ],
     },
   ],
@@ -134,9 +133,9 @@ export const cvData: CVData = {
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   projects: [
     {
-      title: "Kras Pay",
+      title: "Kras Pay — Financial Gateway",
       description:
-        "Engineered a robust financial gateway for cross-border transactions with real-time fraud detection engine using ML classifiers to assess risk scores for every payment. Implemented secure ledger reconciliation systems and multi-currency settlement pipelines.",
+        "Engineered a cross-border payment gateway with real-time ML-powered fraud detection. Built secure ledger reconciliation systems and multi-currency settlement pipelines handling thousands of daily transactions with sub-100ms processing latency.",
       technologies: [
         "Node.js",
         "Scikit-learn",
@@ -146,15 +145,15 @@ export const cvData: CVData = {
       ],
     },
     {
-      title: "Invoice Pro",
+      title: "Invoice Pro — Billing Platform",
       description:
-        "Architected a scalable microservice architecture to handle automated PDF generation and distribution. Designed high-concurrency background processing to handle 5,000+ simultaneous requests during peak billing cycles using asynchronous task queues.",
+        "Architected a scalable invoicing microservice with automated PDF generation, email distribution, and AI-powered financial forecasting. Designed high-concurrency background processing to handle 5,000+ simultaneous requests during peak billing cycles.",
       technologies: ["Python", "FastAPI", "PostgreSQL", "Redis", "Docker"],
     },
     {
       title: "Real-time Analytics Pipeline",
       description:
-        "Built a distributed data pipeline processing 10M+ events daily. Implemented stream processing with Apache Kafka, data warehouse optimization, and real-time dashboarding capabilities.",
+        "Built a distributed data pipeline processing 10M+ events daily with stream processing, data warehouse optimization, and real-time dashboarding for business intelligence insights.",
       technologies: ["Python", "Kafka", "PostgreSQL", "Grafana", "Airflow"],
     },
   ],
@@ -164,16 +163,10 @@ export const cvData: CVData = {
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   education: [
     {
-      school: "Stanford University",
-      degree: "Master of Science",
-      field: "Computer Science (Machine Learning)",
-      year: "2022",
-    },
-    {
-      school: "UC Berkeley",
+      school: "Lagos State University (LASU)",
       degree: "Bachelor of Science",
-      field: "Computer Science & Statistics",
-      year: "2020",
+      field: "Computer Science",
+      year: "Present",
     },
   ],
 
@@ -182,35 +175,35 @@ export const cvData: CVData = {
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   experience: [
     {
-      company: "Tech Corporation",
-      role: "Senior Backend Engineer",
-      duration: "2023 – Present",
+      company: "Freelance / Contract",
+      role: "Senior Backend & ML Engineer",
+      duration: "2023 - Present",
       achievements: [
-        "Led architecture redesign of core payment processing system, reducing latency by 40% and increasing throughput to 10K TPS",
-        "Implemented ML-based fraud detection model achieving 99.2% accuracy with <50ms inference time",
-        "Designed and deployed Kubernetes infrastructure managing 50+ microservices across 3 regions",
-        "Mentored team of 5 junior engineers, conducting code reviews and architecture discussions",
+        "Architected and delivered production backend systems for fintech and SaaS clients, handling 10K+ TPS with 99.9% uptime",
+        "Designed and deployed ML-based fraud detection models achieving 99.2% accuracy with sub-50ms inference latency",
+        "Built and managed Kubernetes infrastructure orchestrating 20+ microservices across multiple cloud regions",
+        "Led end-to-end development of an invoicing platform with AI-powered financial forecasting and automated reporting",
       ],
     },
     {
-      company: "StartUp Inc.",
+      company: "Tech Startup",
       role: "Backend Engineer",
-      duration: "2022 – 2023",
+      duration: "2022 - 2023",
       achievements: [
-        "Built scalable FastAPI backend handling 1M+ daily active users",
-        "Implemented Redis caching layer, reducing database queries by 70%",
-        "Designed data pipeline processing real-time user analytics with Apache Kafka",
-        "Optimized PostgreSQL queries, improving API response times by 60%",
+        "Built scalable FastAPI backend services supporting 1M+ daily active users across web and mobile platforms",
+        "Implemented Redis caching and CDN strategies that reduced database load by 70% and improved API response times by 60%",
+        "Designed real-time data pipelines using Apache Kafka for user analytics and business intelligence",
+        "Established CI/CD pipelines and automated testing suites achieving 90% code coverage",
       ],
     },
     {
-      company: "Consulting Firm",
+      company: "Software Consultancy",
       role: "Software Engineer",
-      duration: "2020 – 2022",
+      duration: "2020 - 2022",
       achievements: [
-        "Developed full-stack applications using Python and React for Fortune 500 clients",
-        "Implemented CI/CD pipelines using GitHub Actions and Docker",
-        "Created automated testing suite achieving 85% code coverage",
+        "Developed full-stack applications using Python, Go, and React for enterprise clients",
+        "Implemented containerized deployment pipelines using Docker and GitHub Actions",
+        "Created automated testing frameworks and integration test suites for critical business logic",
       ],
     },
   ],

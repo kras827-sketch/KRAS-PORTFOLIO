@@ -1,6 +1,6 @@
 /**
  * One-Page Resume PDF Template - 2026 Design
- * Modern, concise, ATS-friendly with professional styling
+ * Compact, ATS-friendly, professional single-page resume
  */
 
 import {
@@ -14,227 +14,212 @@ import {
 import type { CVData } from "@/data/cv-data";
 
 // ─────────────────────────────────────────────────────
-// STYLES - Modern 2026 professional resume
+// COLOR PALETTE
 // ─────────────────────────────────────────────────────
-const PRIMARY_COLOR = "#0f172a"; // Slate 900
-const DARK_TEXT = "#1e293b"; // Slate 800
-const LIGHT_TEXT = "#475569"; // Slate 600
-const BORDER_COLOR = "#e2e8f0"; // Slate 200
+const PRIMARY = "#0f172a";
+const DARK = "#1e293b";
+const MEDIUM = "#475569";
+const LIGHT = "#64748b";
+const ACCENT_BG = "#f8fafc";
+const BORDER = "#cbd5e1";
+const DIVIDER = "#e2e8f0";
 
 const styles = StyleSheet.create({
   page: {
-    paddingTop: 40,
-    paddingBottom: 40,
-    paddingLeft: 38,
-    paddingRight: 38,
+    paddingTop: 36,
+    paddingBottom: 36,
+    paddingLeft: 40,
+    paddingRight: 40,
     fontFamily: "Helvetica",
-    fontSize: 10,
+    fontSize: 9,
     lineHeight: 1.4,
-    color: DARK_TEXT,
+    color: DARK,
     backgroundColor: "#ffffff",
   },
 
-  // Header - Modern concise design
+  // ── HEADER ──
   header: {
-    marginBottom: 14,
+    marginBottom: 16,
     paddingBottom: 10,
-    borderBottomWidth: 3,
-    borderBottomColor: PRIMARY_COLOR,
+    borderBottomWidth: 2,
+    borderBottomColor: PRIMARY,
   },
-
   name: {
     fontSize: 22,
-    fontWeight: 900,
-    marginBottom: 2,
-    color: DARK_TEXT,
-    letterSpacing: -0.4,
-  },
-
-  role: {
-    fontSize: 11,
-    color: PRIMARY_COLOR,
-    fontWeight: 700,
-    marginBottom: 6,
+    fontFamily: "Helvetica-Bold",
+    color: PRIMARY,
     letterSpacing: 0.3,
+    marginBottom: 3,
   },
-
-  contactInfo: {
-    display: "flex",
-    flexDirection: "row",
-    fontSize: 8.5,
-    color: LIGHT_TEXT,
-    gap: 10,
-    flexWrap: "wrap",
-    fontWeight: 500,
-  },
-
-  // Section - Compact and clean
-  section: {
-    marginBottom: 11,
-  },
-
-  sectionTitle: {
-    fontSize: 11,
-    fontWeight: 900,
-    color: DARK_TEXT,
-    marginBottom: 6,
-    letterSpacing: 0.8,
-    paddingBottom: 4,
-    borderBottomWidth: 2,
-    borderBottomColor: PRIMARY_COLOR,
+  role: {
+    fontSize: 10,
+    fontFamily: "Helvetica-Bold",
+    color: MEDIUM,
+    letterSpacing: 0.6,
     textTransform: "uppercase",
+    marginBottom: 8,
   },
-
-  // Skills Grid - 2 columns, compact
-  skillsContainer: {
-    display: "flex",
+  contactRow: {
     flexDirection: "row",
-    gap: 16,
+    flexWrap: "wrap",
+    gap: 4,
+    alignItems: "center",
+  },
+  contactItem: {
+    fontSize: 8,
+    color: MEDIUM,
+  },
+  contactSep: {
+    fontSize: 8,
+    color: BORDER,
+    marginHorizontal: 1,
   },
 
+  // ── SECTIONS ──
+  section: {
+    marginBottom: 12,
+  },
+  sectionTitle: {
+    fontSize: 10,
+    fontFamily: "Helvetica-Bold",
+    color: PRIMARY,
+    letterSpacing: 1.2,
+    textTransform: "uppercase",
+    marginBottom: 6,
+    paddingBottom: 4,
+    borderBottomWidth: 1.5,
+    borderBottomColor: PRIMARY,
+  },
+
+  // ── SKILLS ──
+  skillsContainer: {
+    flexDirection: "row",
+    gap: 14,
+  },
   skillColumn: {
     flex: 1,
   },
-
-  skillCategory: {
-    marginBottom: 6,
+  skillGroup: {
+    marginBottom: 5,
   },
-
-  skillCategoryTitle: {
+  skillGroupTitle: {
     fontSize: 8.5,
-    fontWeight: 800,
-    color: PRIMARY_COLOR,
-    marginBottom: 3,
-    letterSpacing: 0.4,
-    textTransform: "uppercase",
-  },
-
-  skillItem: {
-    fontSize: 8.5,
-    color: LIGHT_TEXT,
-    marginBottom: 1.5,
-    lineHeight: 1.2,
-    fontWeight: 500,
-  },
-
-  // Projects - Compact
-  project: {
-    marginBottom: 8,
-    paddingBottom: 7,
-    borderBottomWidth: 1,
-    borderBottomColor: BORDER_COLOR,
-  },
-
-  projectTitle: {
-    fontSize: 10,
-    fontWeight: 800,
-    color: DARK_TEXT,
-    marginBottom: 1.5,
-    letterSpacing: -0.2,
-  },
-
-  projectDescription: {
-    fontSize: 8.5,
-    color: LIGHT_TEXT,
+    fontFamily: "Helvetica-Bold",
+    color: PRIMARY,
     marginBottom: 2,
-    lineHeight: 1.3,
+    letterSpacing: 0.2,
+  },
+  skillItems: {
+    fontSize: 8,
+    color: MEDIUM,
+    lineHeight: 1.4,
   },
 
-  projectTech: {
-    fontSize: 7.5,
-    color: PRIMARY_COLOR,
-    fontWeight: 600,
+  // ── EXPERIENCE ──
+  experienceEntry: {
+    marginBottom: 10,
   },
-
-  // Experience - Compact and impactful
-  experienceItem: {
-    marginBottom: 8,
-    paddingBottom: 7,
-    borderBottomWidth: 1,
-    borderBottomColor: BORDER_COLOR,
-  },
-
-  companyRole: {
-    display: "flex",
+  expHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginBottom: 1.5,
-    alignItems: "center",
+    alignItems: "flex-start",
+    marginBottom: 1,
+  },
+  expCompany: {
+    fontSize: 10,
+    fontFamily: "Helvetica-Bold",
+    color: DARK,
+  },
+  expDuration: {
+    fontSize: 8,
+    color: LIGHT,
+    fontFamily: "Helvetica-Oblique",
+  },
+  expRole: {
+    fontSize: 9,
+    fontFamily: "Helvetica-Bold",
+    color: MEDIUM,
+    marginBottom: 4,
+  },
+  bulletRow: {
+    flexDirection: "row",
+    marginBottom: 2,
+    paddingLeft: 2,
+  },
+  bulletDot: {
+    fontSize: 8,
+    color: PRIMARY,
+    marginRight: 6,
+    marginTop: 0.5,
+  },
+  bulletText: {
+    fontSize: 8,
+    color: MEDIUM,
+    lineHeight: 1.4,
+    flex: 1,
   },
 
-  company: {
-    fontSize: 10.5,
-    fontWeight: 800,
-    color: DARK_TEXT,
-    letterSpacing: -0.2,
+  // ── PROJECTS ──
+  projectEntry: {
+    marginBottom: 8,
   },
-
-  duration: {
-    fontSize: 8.5,
-    color: LIGHT_TEXT,
-    fontWeight: 600,
-  },
-
-  jobTitle: {
+  projectTitle: {
     fontSize: 9.5,
-    fontWeight: 700,
-    color: PRIMARY_COLOR,
+    fontFamily: "Helvetica-Bold",
+    color: DARK,
+    marginBottom: 2,
+  },
+  projectDesc: {
+    fontSize: 8,
+    color: MEDIUM,
+    lineHeight: 1.3,
     marginBottom: 3,
   },
-
-  achievement: {
-    fontSize: 8.5,
-    color: LIGHT_TEXT,
-    marginBottom: 1.5,
-    marginLeft: 10,
-    lineHeight: 1.3,
-    fontWeight: 500,
+  techLine: {
+    fontSize: 7.5,
+    color: PRIMARY,
+    fontFamily: "Helvetica-Bold",
   },
 
-  // Education - Compact
-  educationItem: {
+  // ── EDUCATION ──
+  eduEntry: {
     marginBottom: 6,
-    paddingBottom: 5,
-    borderBottomWidth: 1,
-    borderBottomColor: BORDER_COLOR,
   },
-
-  school: {
-    fontSize: 10,
-    fontWeight: 800,
-    color: DARK_TEXT,
-    marginBottom: 1,
-    letterSpacing: -0.2,
+  eduHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
   },
-
-  degree: {
-    fontSize: 9,
-    color: PRIMARY_COLOR,
-    fontWeight: 700,
+  eduSchool: {
+    fontSize: 9.5,
+    fontFamily: "Helvetica-Bold",
+    color: DARK,
   },
-
-  degreeField: {
-    fontSize: 8.5,
-    color: LIGHT_TEXT,
-    fontWeight: 500,
-  },
-
-  year: {
+  eduYear: {
     fontSize: 8,
-    color: LIGHT_TEXT,
-    fontWeight: 500,
-    marginTop: 1,
+    color: LIGHT,
+    fontFamily: "Helvetica-Oblique",
+  },
+  eduDegree: {
+    fontSize: 8.5,
+    color: MEDIUM,
   },
 
-  // Footer
+  // ── FOOTER ──
   footer: {
-    marginTop: 12,
-    fontSize: 7,
-    color: "#999",
-    textAlign: "center",
-    borderTopWidth: 1,
-    borderTopColor: BORDER_COLOR,
+    position: "absolute",
+    bottom: 18,
+    left: 40,
+    right: 40,
+    borderTopWidth: 0.5,
+    borderTopColor: DIVIDER,
     paddingTop: 6,
+    flexDirection: "row",
+    justifyContent: "center",
+  },
+  footerText: {
+    fontSize: 7,
+    color: BORDER,
   },
 });
 
@@ -246,15 +231,13 @@ interface ResumeTemplateProps {
 }
 
 export function ResumeTemplate({ data }: ResumeTemplateProps) {
-  // Take top 3 skills categories and 2 projects for resume
-  const topSkills = data.skills.slice(0, 3);
+  const topSkills = data.skills.slice(0, 4);
   const topProjects = data.projects.slice(0, 2);
   const topExperience = data.experience.slice(0, 2);
 
-  // Split skills for two columns
   const skillsPerColumn = Math.ceil(topSkills.length / 2);
-  const skillsColumn1 = topSkills.slice(0, skillsPerColumn);
-  const skillsColumn2 = topSkills.slice(skillsPerColumn);
+  const col1 = topSkills.slice(0, skillsPerColumn);
+  const col2 = topSkills.slice(skillsPerColumn);
 
   return (
     <Document>
@@ -263,22 +246,22 @@ export function ResumeTemplate({ data }: ResumeTemplateProps) {
         <View style={styles.header}>
           <Text style={styles.name}>{data.name}</Text>
           <Text style={styles.role}>{data.role}</Text>
-          <View style={styles.contactInfo}>
-            <Text>{data.email}</Text>
-            <Text>•</Text>
-            <Text>{data.phone}</Text>
-            <Text>•</Text>
-            <Text>{data.location}</Text>
+          <View style={styles.contactRow}>
+            <Text style={styles.contactItem}>{data.email}</Text>
+            <Text style={styles.contactSep}>|</Text>
+            <Text style={styles.contactItem}>{data.phone}</Text>
+            <Text style={styles.contactSep}>|</Text>
+            <Text style={styles.contactItem}>{data.location}</Text>
             {data.github && (
               <>
-                <Text>•</Text>
-                <Text>{data.github}</Text>
+                <Text style={styles.contactSep}>|</Text>
+                <Text style={styles.contactItem}>{data.github}</Text>
               </>
             )}
             {data.linkedin && (
               <>
-                <Text>•</Text>
-                <Text>{data.linkedin}</Text>
+                <Text style={styles.contactSep}>|</Text>
+                <Text style={styles.contactItem}>{data.linkedin}</Text>
               </>
             )}
           </View>
@@ -288,33 +271,24 @@ export function ResumeTemplate({ data }: ResumeTemplateProps) {
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Technical Skills</Text>
           <View style={styles.skillsContainer}>
-            {/* Column 1 */}
             <View style={styles.skillColumn}>
-              {skillsColumn1.map((skill, idx) => (
-                <View key={idx} style={styles.skillCategory}>
-                  <Text style={styles.skillCategoryTitle}>{skill.category}</Text>
-                  {skill.items.slice(0, 5).map((item, itemIdx) => (
-                    <Text key={itemIdx} style={styles.skillItem}>
-                      → {item}
-                    </Text>
-                  ))}
+              {col1.map((skill, i) => (
+                <View key={i} style={styles.skillGroup}>
+                  <Text style={styles.skillGroupTitle}>{skill.category}</Text>
+                  <Text style={styles.skillItems}>
+                    {skill.items.join("  |  ")}
+                  </Text>
                 </View>
               ))}
             </View>
-
-            {/* Column 2 */}
-            {skillsColumn2.length > 0 && (
+            {col2.length > 0 && (
               <View style={styles.skillColumn}>
-                {skillsColumn2.map((skill, idx) => (
-                  <View key={idx} style={styles.skillCategory}>
-                    <Text style={styles.skillCategoryTitle}>
-                      {skill.category}
+                {col2.map((skill, i) => (
+                  <View key={i} style={styles.skillGroup}>
+                    <Text style={styles.skillGroupTitle}>{skill.category}</Text>
+                    <Text style={styles.skillItems}>
+                      {skill.items.join("  |  ")}
                     </Text>
-                    {skill.items.slice(0, 5).map((item, itemIdx) => (
-                      <Text key={itemIdx} style={styles.skillItem}>
-                        → {item}
-                      </Text>
-                    ))}
                   </View>
                 ))}
               </View>
@@ -326,19 +300,18 @@ export function ResumeTemplate({ data }: ResumeTemplateProps) {
         {topExperience.length > 0 && (
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>Professional Experience</Text>
-
-            {topExperience.map((exp, idx) => (
-              <View key={idx} style={styles.experienceItem}>
-                <View style={styles.companyRole}>
-                  <Text style={styles.company}>{exp.company}</Text>
-                  <Text style={styles.duration}>{exp.duration}</Text>
+            {topExperience.map((exp, i) => (
+              <View key={i} style={styles.experienceEntry}>
+                <View style={styles.expHeader}>
+                  <Text style={styles.expCompany}>{exp.company}</Text>
+                  <Text style={styles.expDuration}>{exp.duration}</Text>
                 </View>
-                <Text style={styles.jobTitle}>{exp.role}</Text>
-
-                {exp.achievements.slice(0, 3).map((achievement, achIdx) => (
-                  <Text key={achIdx} style={styles.achievement}>
-                    ✓ {achievement}
-                  </Text>
+                <Text style={styles.expRole}>{exp.role}</Text>
+                {exp.achievements.slice(0, 3).map((ach, j) => (
+                  <View key={j} style={styles.bulletRow}>
+                    <Text style={styles.bulletDot}>-</Text>
+                    <Text style={styles.bulletText}>{ach}</Text>
+                  </View>
                 ))}
               </View>
             ))}
@@ -349,17 +322,16 @@ export function ResumeTemplate({ data }: ResumeTemplateProps) {
         {topProjects.length > 0 && (
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>Featured Projects</Text>
-
-            {topProjects.map((project, idx) => (
-              <View key={idx} style={styles.project}>
+            {topProjects.map((project, i) => (
+              <View key={i} style={styles.projectEntry}>
                 <Text style={styles.projectTitle}>{project.title}</Text>
-                <Text style={styles.projectDescription}>
-                  {project.description.length > 140
-                    ? project.description.substring(0, 140) + "..."
+                <Text style={styles.projectDesc}>
+                  {project.description.length > 180
+                    ? project.description.substring(0, 180) + "..."
                     : project.description}
                 </Text>
-                <Text style={styles.projectTech}>
-                  <Text style={{ fontWeight: 700 }}>Tech:</Text> {project.technologies.slice(0, 4).join(" • ")}
+                <Text style={styles.techLine}>
+                  Technologies: {project.technologies.slice(0, 5).join("  |  ")}
                 </Text>
               </View>
             ))}
@@ -370,28 +342,32 @@ export function ResumeTemplate({ data }: ResumeTemplateProps) {
         {data.education.length > 0 && (
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>Education</Text>
-
-            {data.education.map((edu, idx) => (
-              <View key={idx} style={styles.educationItem}>
-                <Text style={styles.school}>{edu.school}</Text>
-                <Text style={styles.degree}>{edu.degree}</Text>
-                <Text style={styles.degreeField}>{edu.field}</Text>
-                <Text style={styles.year}>{edu.year}</Text>
+            {data.education.map((edu, i) => (
+              <View key={i} style={styles.eduEntry}>
+                <View style={styles.eduHeader}>
+                  <Text style={styles.eduSchool}>{edu.school}</Text>
+                  <Text style={styles.eduYear}>{edu.year}</Text>
+                </View>
+                <Text style={styles.eduDegree}>
+                  {edu.degree} - {edu.field}
+                </Text>
               </View>
             ))}
           </View>
         )}
 
-        {/* Footer */}
-        <View style={styles.footer}>
-          <Text>Professional Resume | Generated {new Date().toLocaleDateString()} | ATS-Friendly</Text>
+        {/* ─── FOOTER ─── */}
+        <View style={styles.footer} fixed>
+          <Text style={styles.footerText}>
+            {data.name}  |  One-Page Resume  |  ATS-Optimized
+          </Text>
         </View>
       </Page>
     </Document>
   );
 }
 
-// Export for viewer (for debugging)
+// Viewer wrapper for debugging
 export function ResumeTemplateViewer({ data }: ResumeTemplateProps) {
   return (
     <PDFViewer width="100%" height="600px">
